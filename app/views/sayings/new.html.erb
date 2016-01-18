@@ -1,0 +1,7 @@
+<h1>Enter Your Favorite Celebrity Moment</h1>
+<%= simple_form_for @saying do |f| %>
+	<%= f.input :quote %>
+	<%= f.input :celebrity %>
+	<br />
+	<%= f.submit 'Create' %>
+<% end %>
