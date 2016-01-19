@@ -6,4 +6,16 @@ class SayingsController < ApplicationController
 	def new
 		@saying = Saying.new
 	end
+
+	def create
+		Saying.create(saying_params)
+		redirect_to root_path
+	end
+
+	private
+
+	def saying_params
+		params.require(:saying).permit(:quote, :celebrity)
+	end
 end
+
